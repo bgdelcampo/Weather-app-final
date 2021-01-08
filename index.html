@@ -10,48 +10,69 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/dc1f1b2a50.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="bigContainer">
-        <div class="form">
-            <form>
-          <input type="text" id="cityName" placeholder="Enter your city" />
-          <input type="submit" value="Go" />
+      <!-- SEARCH ENGINE -->
+      <div class="form">
+        <!-- <i id="search-location" class="fas fa-search-location"></i> -->
+        <!-- <button id="search-location" class="searchLocation"></button> -->
+        <form>
+          <input
+            type="text"
+            class="enterCityName"
+            id="city-name"
+            placeholder="Enter your city"
+          />
+          <input
+            type="submit"
+            class="buttonSubmit"
+            id="button-submit"
+            value="Submit"
+          />
         </form>
-        </div>
-        
+        <p class="currentDate" id="current-date"></p>
+      </div>
+      <!-- CURRENT WEATHER -->
       <div class="container">
-        <h1>city Name</h1>
-        <p>current weater (emoji here)</p>
-       </div>
-       <div class="futureWeather"></div>
-          <div class="row">
-            <div class="col-sm">
-              
-            </div>
-            <div class="col-sm">
-              One of three columns
-            </div>
-            <div class="col-sm">
-              One of three columns
-            </div>
-            <div class="col-sm">
-              One of three columns
-            </div>
-            <div class="col-sm">
-              One of three columns
-            </div>
-            <div class="col-sm">
-              One of three columns
-            </div>
-            <div class="col-sm">
-              
-            </div>
-            
+        <h1 id="location">Dreden</h1>
+        <p id="current-weather">12 °C</p>
+        <!-- <div class="units">
+          <a href="#" id="celsius">
+            °C |
+          </a>
+          <a href="#" id="farenheit">
+            °F
+          </a>
+        </div> -->
+      </div>
+
+      <!-- WEATHER NEXT 5 DAYS -->
+      <div class="futureWeather"></div>
+      <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm">
+          One of three columns
+        </div>
+        <div class="col-sm">
+          One of three columns
+        </div>
+        <div class="col-sm">
+          One of three columns
+        </div>
+        <div class="col-sm">
+          One of three columns
+        </div>
+        <div class="col-sm">
+          One of three columns
+        </div>
+        <div class="col-sm"></div>
+      </div>
     </div>
+    <script src="src/scrip.js"></script>
     
-    </div>
-    <script src = "src/app.js"></script>
   </body>
 </html>
