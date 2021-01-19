@@ -38,10 +38,20 @@
       </div>
       <!-- CURRENT WEATHER -->
       <div class="container">
-        <p id="current-weather">12 °C | °F</p>
-        <div class="col-4"> Humidity:</div>
-        <div class="col-4">Wind: </div>
-        <div class="col-4">Precipitation: </div>
+        <h1 id="location">Dreden</h1>
+        <p class="description">Clear</p>
+        <!-- <p id="current-weather">12 °C | °F</p> -->
+        <div class="row">
+          <div class="col-md-6"><p id="current-weather">12 °C | °F</p></div>
+          <div class="col-md-6">
+             <ul>
+          <li class="humidity">Humidity:</li>
+          <li class="wind">Wind:</li>
+          <li class="precipitation">Precipiation:</li>
+        </ul>
+          </div>
+        </div>
+    
         <!-- <div class="units">
           <a href="#" id="celsius">
             °C |
@@ -74,12 +84,10 @@
         <div class="col-sm"></div>
       </div>
     </div>
-   <div>
     <footer>
       <a href="https://github.com/bgdelcampo/Weather-app-final">Open-source</a>
        code by Bea 
     </footer>
-    </div>
     <script src="src/scrip.js"></script>
     
   </body>
