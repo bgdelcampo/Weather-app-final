@@ -4,6 +4,12 @@ body {
 
 h1 {
     line-height: 28px;
+    margin-bottom: 0;
+}
+
+.containerWrapper {
+    margin: 40px auto;
+    max-width: 600px;
 }
 
 .bigContainer {
@@ -25,6 +31,11 @@ h1 {
     padding: 40px;
     background: none;
     color: white;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 li {
@@ -101,3 +112,19 @@ li {
 .farenheit {
     cursor: pointer;
 } */
+
+.weather-temperature img {
+    width: 60px;
+}
+
+strong {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.unit {
+    position: relative;
+    font-size: 16px;
+    top: -15px;
+}

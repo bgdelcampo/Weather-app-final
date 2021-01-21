@@ -15,6 +15,7 @@
     <script src="https://kit.fontawesome.com/dc1f1b2a50.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <div class="containerWrapper">
     <div class="bigContainer">
       <!-- SEARCH ENGINE -->
       <div class="form">
@@ -41,8 +42,14 @@
         <h1 id="location">Dreden</h1>
         <p class="description">Clear</p>
         <!-- <p id="current-weather">12 °C | °F</p> -->
-        <div class="row">
-          <div class="col-md-6"><p id="current-weather">12 °C | °F</p></div>
+        <div class="row">     
+          <div class="col-md-6">
+            <div class="clearfix weather-temperature">
+                <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="Clear" id="icon" class="float-left" />
+        </div> 
+        <div class="float-left">
+        <p id="current-weather"> <strong>12</strong> <span class="unit">°C | °F</span></p></div>
+        </div>
           <div class="col-md-6">
              <ul>
           <li class="humidity">Humidity:</li>
@@ -88,6 +95,7 @@
       <a href="https://github.com/bgdelcampo/Weather-app-final">Open-source</a>
        code by Bea 
     </footer>
+    </div>
     <script src="src/scrip.js"></script>
     
   </body>
