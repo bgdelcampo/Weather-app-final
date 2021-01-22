@@ -132,3 +132,7 @@ strong {
 a {
     text-decoration: none;
 }
+
+.description {
+    text-transform: capitalize;
+}

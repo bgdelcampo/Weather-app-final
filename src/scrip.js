@@ -38,10 +38,21 @@ function showTemperature (response) {
   let temp = Math.round(response.data.main.temp);
   let currentCity = document.querySelector("#current-weather");
   currentCity.innerHTML = `${temp}°C`;
+  let descriptionElement = document.querySelector("#description-city");
+  descriptionElement.innerHTML= response.data.weather[0].description;
+  let humidityElement = document.querySelector ("#humidity-city");
+  humidityElement.innerHTML = response.data.main.humidity;
+  let windElement = document.querySelector("#wind-city");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 let searchCity = document.querySelector("#button-submit");
 searchCity.addEventListener("click", goCity);
+
+
+// fetch description
+
+
 
 // Add a Current Location button
 

@@ -40,8 +40,7 @@
       <!-- CURRENT WEATHER -->
       <div class="container">
         <h1 id="location">Dreden</h1>
-        <p class="description">Clear</p>
-        <!-- <p id="current-weather">12 °C | °F</p> -->
+        <p id="description-city" class="description">Clear</p>
         <div class="row">     
           <div class="col-md-6">
             <div class="clearfix weather-temperature">
@@ -52,8 +51,8 @@
         </div>
           <div class="col-md-6">
              <ul>
-          <li class="humidity">Humidity:</li>
-          <li class="wind">Wind:</li>
+          <li class="humidity">Humidity: <span id="humidity-city"></span> %</li>
+          <li class="wind">Wind: <span id="wind-city" ></span> km/h</li>
           <li class="precipitation">Precipiation:</li>
         </ul>
           </div>
