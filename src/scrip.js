@@ -36,8 +36,8 @@ function goCity(event) {
 
 function showTemperature (response) {
   let temp = Math.round(response.data.main.temp);
-  let currentCity = document.querySelector("#current-weather");
-  currentCity.innerHTML = `${temp}°C`;
+  let currentCity = document.querySelector("#temperature");
+  currentCity.innerHTML = `${temp}`;
   let descriptionElement = document.querySelector("#description-city");
   descriptionElement.innerHTML= response.data.weather[0].description;
   let humidityElement = document.querySelector ("#humidity-city");
@@ -50,6 +50,7 @@ function showTemperature (response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  celsiusTemperature = response.data.main.temp;
 }
 
 
@@ -82,13 +83,41 @@ searchCity.addEventListener("click", goCity);
 
 // --°C and °F--
 
+function displayFahrenheitTemperature (event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature*9)/5+32;
+  let temperatureElement = document.querySelector ("#temperature");
+  celsiuslink.classList.remove("active");
+  fahrenheitlink.classList.add("active");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature (event) {
+  event.preventDefault ();
+  celsiuslink.classList.add("active");
+  fahrenheitlink.classList.remove("active");
+  let temperatureElement = document.querySelector ("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let fahrenheitlink =document.querySelector ("#fahrenheit-link");
+fahrenheitlink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiuslink =document.querySelector ("#celsius-link");
+celsiuslink.addEventListener("click", displayCelsiusTemperature);
+
+let celsiusTemperature = null;
+
+goCity ("Dresden");
+
+
 // function convertCelsius(event) {
 //   event.preventDefault();
 //   let tempCelsius = document.querySelector("#current-weather");
 //   tempCelsius.innerHTML = "12°C";
 // }
 
-// let celsiusUnits = document.querySelector("#celsius");
+// let celsiusUnits = document.querySelector("#celsius-link");
 // celsiusUnits.addEventListener("click", convertCelsius);
 
 // function convertFarenheit(event) {
@@ -98,7 +127,9 @@ searchCity.addEventListener("click", goCity);
 //   tempFarenheit.innerHTML = "53.6°F";
 // }
 
-// let farenheitUnits = document.querySelector("#farenheit");
+// let farenheitUnits = document.querySelector("#farenheit-link");
 // farenheitUnits.addEventListener("click", convertFarenheit);
+
+
 
 // API

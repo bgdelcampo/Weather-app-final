@@ -136,3 +136,12 @@ a {
 .description {
     text-transform: capitalize;
 }
+
+.active {
+    color: white;
+    cursor: default;
+}
+
+.active:hover {
+    text-decoration: none;
+}
