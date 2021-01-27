@@ -31,6 +31,7 @@ h1 {
     padding: 40px;
     background: none;
     color: white;
+    margin-bottom: 100px;
 }
 
 ul {
@@ -50,8 +51,6 @@ li {
 .futureWeather {
     padding: 20px;
 }
-
-/* SEARCH ENGINE */
 
 .form {
     text-align: right;
